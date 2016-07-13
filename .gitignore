@@ -38,3 +38,7 @@ jspm_packages
 
 #IDE
 .idea
+*.jar
+
+#config file
+config.mailgun.js

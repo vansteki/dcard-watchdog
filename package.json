@@ -1,0 +1,13 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "node-horseman": "^3.1.1",
+    "node-schedule": "^1.1.1",
+    "webdriverio": "^4.2.1"
+  },
+  "scripts": {
+    "webdriver": " curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.0.jar && java -jar selenium-server-standalone-2.53.0.jar",
+    "server": "java -jar selenium-server-standalone-2.53.0.jar"
+  }
+}
