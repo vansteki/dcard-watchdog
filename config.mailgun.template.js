@@ -4,11 +4,11 @@
 var apiKey = "";
 var domain = "";
 var restApi = `https://api.mailgun.net/v3/${domain}/messages`;
-var mailTo = "";
-var dcardEmail = "";
+var mailTo = "";　//填入你的信箱
+var dcardEmail = "";　//Dcard 帳號
 var dcardPassword = "";
-var dcardCheckOutTime = "0 12 * * * *";
-var dcardSendPageTime = "1 12 * * * *";
+var dcardCheckOutTime = "0 12 * * * *"; //登入時間
+var dcardSendPageTime = "1 12 * * * *"; //寄送時間
 
 module.exports = {
     apiKey,
