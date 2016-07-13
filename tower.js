@@ -23,9 +23,9 @@ schedule.scheduleJob(config.dcardSendPageTime || '1 12 * * * *', function () {
         api: config.restApi,
         from: `from='Mailgun Sandbox <postmaster@${config.domain}>`,
         to: `to=DK <${config.mailTo}>`,
-        subject: "subject='Hello DK'",
-        text: "text='Congratulations DK, you just sent an email with Mailgun!  You are truly awesome!'",
-        attachment: "attachment=test.jpg"
+        subject: "subject=Checkout your Dcard today!",
+        text: "text=https://www.dcard.tw/dcard",
+        attachment: "attachment=@./dcard.jpg"
     };
     var task = childProcess.spawn("curl", ["-s", "--user", curlOpt.apiKey, curlOpt.api,
         "-F", curlOpt.from,
