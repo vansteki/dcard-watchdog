@@ -16,11 +16,11 @@ dcard-watchdog 會每日幫你登入，還會將卡友的頁面刁到你的信�
 
 ## Step2.   if your are first time using it, download selenium-server and run it
  
-    npm run webdriver
+    npm run webdriver&
         
 ## Step2.   or just run selenium-server
         
-    npm run server        
+    npm run server&        
 
 ## Step3.   run app
 
