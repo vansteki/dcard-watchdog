@@ -5,7 +5,7 @@ const schedule = require('node-schedule');
 const childProcess = require('child_process');
 const config = require('./config.mailgun.js');
 
-schedule.scheduleJob(config.dcardCheckOutTime || '0 12 * * * *', function () {
+schedule.scheduleJob(config.dcardCheckOutTime || '* * 12 * * *', function () {
     console.log('Tower: check dcard');
     var task = childProcess.spawn('node', ['bot.js', config.dcardEmail, config.dcardPassword]);
     task.stdout.on('data', function (data) {
@@ -16,7 +16,7 @@ schedule.scheduleJob(config.dcardCheckOutTime || '0 12 * * * *', function () {
     });
 });
 
-schedule.scheduleJob(config.dcardSendPageTime || '1 12 * * * *', function () {
+schedule.scheduleJob(config.dcardSendPageTime || '* 1 12 * * *', function () {
     console.log('Tower: send photo');
     var curlOpt = {
         apiKey: config.apiKey,
